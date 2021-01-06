@@ -1,0 +1,67 @@
+"Games"
+{
+    "csgo"
+    {
+		"Offsets"
+		{
+			"FireBulletCallOffset"
+			{
+				"windows"	"2379"
+				"linux"		"1904"
+			}
+		
+			"CTraceFilterSkipTwoEntitiesCallOffset"
+			{
+				"windows"	"1104"
+				"linux"		"1123"
+			}
+			
+			"CTraceFilterSkipTwoEntitiesVTableOffset"
+			{
+				"windows"	"92"
+				"linux"		"24"
+			}
+			
+			"CTraceFilterSimpleCallOffset"
+			{
+				"windows"	"1775"
+				"linux"		"4066"
+			}
+			
+			"CTraceFilterSimpleVTableOffset"
+			{
+				"windows"	"61"
+				"linux"		"11"
+			}
+		}
+		
+		"Addresses"
+		{
+			"lagcompensation"
+			{
+				"windows"
+				{
+					"signature"	"FX_FireBullets"
+					"read" "1128"
+				}
+				
+				"linux"
+				{
+					"signature"	"FX_FireBullets"
+					"read" "519"
+					"read" "0"
+				}
+			}
+		}
+	
+        "Signatures"
+        {
+            "FX_FireBullets"
+            {
+                "library" "server"
+                "windows" "\x55\x8B\xEC\x83\xE4\xF8\x81\xEC\xE0\x01\x00\x00"
+                "linux" "\x55\x89\xE5\x57\x56\x53\x81\xEC\xBC\x02\x00\x00\x8B\x5D\x10"
+            }
+        }
+    }
+}
